@@ -14,10 +14,7 @@ var landingFunctions = {
       if ($(window).width() < 1081) {
         $("html, body")
           .stop()
-          .animate(
-            { scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) },
-            1000,
-          );
+          .animate({ scrollTop: $(this.hash).offset().top + fixedOffset + (cardHeight - windowHeight) }, 1000);
         e.preventDefault();
       } else {
         $("html, body")
@@ -27,34 +24,75 @@ var landingFunctions = {
       }
     });
 
-    $("#menu-open").click(function() {
-      $(this).toggleClass("active")
-      $("#menu").toggleClass("active")
-    })
-
-    AOS.init({
-      disable: function () {
-        if ($(window).width() <= 1080) {
-          return true;
-        }
-        return false;
-      },
-      once: true,
-      duration: 1000,
-      offset: 0,
+    $("#menu-open").click(function () {
+      $(this).toggleClass("active");
+      $("#menu").toggleClass("active");
     });
 
-    $(window).resize(function () {
-      AOS.refresh();
+    var show = true;
+    var countbox = ".info__section";
+    $(window).on("scroll load resize", function () {
+      if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+      var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+      var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+      var w_height = $(window).height(); // Высота окна браузера
+      var d_height = $(document).height(); // Высота всего документа
+      var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+      if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+        $(".info__block-item-text").css("opacity", "1");
+        $(".info__block-1 .info__block-item-text, .info__block-2 .info__block-item-text").spincrement({
+          thousandSeparator: "",
+          duration: 3000,
+        });
+
+        show = false;
+      }
     });
 
-    $("[data-fancybox]").fancybox({
-      loop: true,
-      infobar: false,
-      animationEffect: false,
-      backFocus: false,
-      hash: false,
+    const $element = $(".info__bottom"); // Что переносим
+    const $originalParent = $(".info__right"); // Где он лежит обычно (десктоп)
+    const $targetParent = $(".info__content"); // Куда переносим (мобилка/планшет)
+    const breakpoint = 1080;
+
+    function moveElement() {
+      const windowWidth = $(window).width();
+
+      if (windowWidth < breakpoint) {
+        $element.detach().appendTo($targetParent);
+      } else {
+        $element.detach().appendTo($originalParent);
+      }
+    }
+
+    moveElement();
+
+    $(window).on("resize", function () {
+      moveElement();
     });
+
+    // AOS.init({
+    //   disable: function () {
+    //     if ($(window).width() <= 1080) {
+    //       return true;
+    //     }
+    //     return false;
+    //   },
+    //   once: true,
+    //   duration: 1000,
+    //   offset: 0,
+    // });
+
+    // $(window).resize(function () {
+    //   AOS.refresh();
+    // });
+
+    // $("[data-fancybox]").fancybox({
+    //   loop: true,
+    //   infobar: false,
+    //   animationEffect: false,
+    //   backFocus: false,
+    //   hash: false,
+    // });
   },
 
   time: function () {
@@ -112,13 +150,7 @@ var landingFunctions = {
       monthNum += now.getMonth() + 1;
 
       // return dayNum + "." + monthNum + "." + now.getFullYear();
-      return (
-        dayNum +
-        "." +
-        monthNum +
-        "." +
-        String(now.getFullYear()).substr(String(now.getFullYear()).length - 2)
-      );
+      return dayNum + "." + monthNum + "." + String(now.getFullYear()).substr(String(now.getFullYear()).length - 2);
     }
 
     // $(".date__1").text(getDate(-5));

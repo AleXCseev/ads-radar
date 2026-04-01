@@ -1,9 +1,7 @@
 .radar__section {
-  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
 }
 
 .section {
-  height: 100%;
   overflow-y: auto;
 }
 
@@ -13,6 +11,12 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.wrapper {
+  min-height: calc(100vh - 90px);
+  min-height: calc(100svh - 90px);
+  padding: 30px 0;
 }
 
 .radar__content {
@@ -388,6 +392,10 @@
     align-items: center;
     gap: 50px;
   }
+  .wrapper {
+    min-height: calc(100vh - 79px);
+    min-height: calc(100svh - 79px);
+  }
   .radar__content {
     width: 100%;
   }
@@ -419,7 +427,7 @@
   .price {
     padding: 5px 0 0px;
   }
-  .radar__section {
+  .site__wrapper {
     background: radial-gradient(93.26% 32.69% at 63.98% 75.68%, #001372 0%, #000 100%);
   }
 }
@@ -431,7 +439,12 @@
   }
   .radar__wrapper {
     gap: 10vw;
-    padding: 10vw 2vw;
+    justify-content: flex-start;
+  }
+  .wrapper {
+    padding: 8vw 2vw;
+    min-height: calc(100vh - 71px);
+    min-height: calc(100svh - 71px);
   }
   .radar__text {
     font-size: 4vw;
