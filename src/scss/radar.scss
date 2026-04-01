@@ -1,16 +1,18 @@
 .radar__section {
+  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
+}
+
+.section {
   height: 100%;
   overflow-y: auto;
-  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
 }
 
 .radar__wrapper {
   height: 100%;
-  padding: 30px 0;
+  gap: 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 100px;
 }
 
 .radar__content {
