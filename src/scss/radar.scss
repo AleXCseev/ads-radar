@@ -434,24 +434,24 @@
 
 @media (max-width: 440px) {
   .radar__title {
-    font-size: 6.8vw;
-    margin-bottom: 1.5vw;
+    font-size: 6.5vw;
+    margin-bottom: 1vw;
   }
   .radar__wrapper {
-    gap: 10vw;
+    gap: 6vw;
     justify-content: flex-start;
   }
   .wrapper {
-    padding: 8vw 2vw;
+    padding: 6vw 2vw;
     min-height: calc(100vh - 71px);
     min-height: calc(100svh - 71px);
   }
   .radar__text {
-    font-size: 4vw;
+    font-size: 3.8vw;
     margin-bottom: 1vw;
   }
   .radar__text-small {
-    font-size: 4.5vw;
+    font-size: 4.2vw;
     margin-bottom: 0;
   }
   .radar__btn-wrapper {
@@ -486,17 +486,17 @@
     font-size: 5vw;
   }
   .radar__items {
-    margin-top: 5vw;
+    margin-top: 4vw;
   }
   .radar__item-title {
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
   .radar__item-info {
-    font-size: 2.6vw;
+    font-size: 2.4vw;
   }
   .radar__block {
-    width: 91vw;
-    height: 91vw;
+    width: 88vw;
+    height: 88vw;
   }
   .radar__pin {
     width: 3.4vw;

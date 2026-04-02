@@ -129,7 +129,7 @@ body:has(.features__section) {
   }
   .features__title {
     font-size: 8vw;
-    margin-bottom: 9vw;
+    margin-bottom: 5vw;
   }
   .features__items:before {
     display: none;
@@ -137,8 +137,8 @@ body:has(.features__section) {
   .features__items {
     flex-direction: column;
     align-items: center;
-    gap: 8vw;
-    margin-bottom: 16vw;
+    gap: 4vw;
+    margin-bottom: 12vw;
   }
   .features__item {
     width: 100%;
@@ -146,10 +146,10 @@ body:has(.features__section) {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 3.5vw 5vw;
+    padding: 3vw 4vw;
     background: radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.2) 0%, rgba(115, 115, 115, 0.2) 100%);
     border-radius: 17px;
-    gap: 5vw;
+    gap: 4vw;
 
     &:hover {
       .features__icon {
@@ -160,8 +160,8 @@ body:has(.features__section) {
   .features__icon {
     margin-bottom: 0;
     flex-shrink: 0;
-    width: 13.5vw;
-    height: 12.5vw;
+    width: 12.5vw;
+    height: 12vw;
 
     img {
       width: 50%;
