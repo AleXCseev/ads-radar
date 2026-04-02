@@ -10,7 +10,8 @@ body {
   line-height: normal;
   font-weight: 400;
   color: var(--color-white);
-  background: var(--color-black);
+  background-color: var(--color-black);
+  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
 }
 
 .visually-hidden {
@@ -32,7 +33,6 @@ body {
   align-items: center;
   overflow: hidden;
   margin: auto;
-  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
 }
 
 .container {

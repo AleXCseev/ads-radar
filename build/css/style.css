@@ -190,7 +190,9 @@ body {
   line-height: normal;
   font-weight: 400;
   color: var(--color-white);
-  background: var(--color-black);
+  background-color: var(--color-black);
+  background: -webkit-radial-gradient(50.66% 54.43%, 57.99% 59.89%, #0d1c3b 0%, #000 100%);
+  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
 }
 
 .visually-hidden {
@@ -220,8 +222,6 @@ body {
           align-items: center;
   overflow: hidden;
   margin: auto;
-  background: -webkit-radial-gradient(50.66% 54.43%, 57.99% 59.89%, #0d1c3b 0%, #000 100%);
-  background: radial-gradient(57.99% 59.89% at 50.66% 54.43%, #0d1c3b 0%, #000 100%);
 }
 
 .container {
@@ -1179,7 +1179,7 @@ body {
   .price {
     padding: 5px 0 0px;
   }
-  .site__wrapper {
+  body {
     background: -webkit-radial-gradient(63.98% 75.68%, 93.26% 32.69%, #001372 0%, #000 100%);
     background: radial-gradient(93.26% 32.69% at 63.98% 75.68%, #001372 0%, #000 100%);
   }
@@ -1271,7 +1271,7 @@ body {
     right: 24%;
   }
 }
-.site__wrapper:has(.features__section) {
+body:has(.features__section) {
   background: #000818;
 }
 
@@ -1912,7 +1912,7 @@ body {
     margin-top: 8vw;
   }
 }
-.site__wrapper:has(.pricing__section) {
+body:has(.pricing__section) {
   background: #000818;
 }
 
