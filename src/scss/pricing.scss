@@ -70,5 +70,28 @@
     .features__title {
       margin-bottom: 10vw;
     }
+    .features__items {
+      margin-bottom: 12vw;
+    }
+    .pricing__text {
+      font-size: 3.8vw;
+      padding: 3.8vw 0 7vw;
+    }
+    .pricing__spot-text {
+      font-size: 3.2vw;
+    }
+    .pricing__spot {
+      margin-bottom: 2.5vw;
+      max-width: 62vw;
+    }
+    .progressbar {
+      width: 50vw;
+      height: 1vw;
+      border-radius: 3vw;
+    }
+    .radar__btn div {
+      padding: 4vw 6vw;
+      font-size: 4.5vw;
+    }
   }
 }

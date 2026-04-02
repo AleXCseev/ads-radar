@@ -36,29 +36,36 @@ const landingFunctions = {
       return Math.floor(Math.random() * Math.floor(max));
     }
 
-    const CURRENT = 20;
     const MAX = 100;
-
-    let current = CURRENT;
 
     $(".max").text(MAX);
 
     function updateProgress() {
-      if (current < MAX - 1) {
+      const storageCurrent = localStorage.getItem("progress");
+      let current = 0;
+
+      if (storageCurrent) {
+        current = +storageCurrent;
+      } else {
+        current = 20;
+      }
+
+      if (current < MAX - 10) {
         current = current + getRandomInt(3);
         const remainder = MAX - current;
         const progressPercent = (current / MAX) * 100;
         $(".current").text(current);
         $(".remainder").text(remainder);
         $(".bar").css("width", progressPercent + "%");
+        localStorage.setItem("progress", current);
       } else {
-        current = 20;
+        localStorage.setItem("progress", 20);
       }
     }
 
     updateProgress();
 
-    setInterval(updateProgress, 10000);
+    setInterval(updateProgress, 50000);
   },
 
   menu: function () {
