@@ -85,8 +85,8 @@ const landingFunctions = {
       var w_height = $(window).height(); // Высота окна браузера
       var d_height = $(document).height(); // Высота всего документа
       var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-      if (w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-        $(".info__block-item-text").css("opacity", "1");
+      if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+        // $(".info__block-item-text").css("opacity", "1");
         $(".info__block-1 .info__block-item-text, .info__block-2 .info__block-item-text").spincrement({
           thousandSeparator: "",
           duration: 3000,

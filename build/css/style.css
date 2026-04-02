@@ -1759,7 +1759,6 @@ body:has(.features__section) {
   font-size: 20px;
   text-align: center;
   color: #d4ffe3;
-  opacity: 0;
 }
 
 .info__block-1 .info__block-item-text:before {
