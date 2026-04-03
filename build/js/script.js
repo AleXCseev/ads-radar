@@ -4,7 +4,7 @@ const landingFunctions = {
     this.menu();
     this.spincrement();
     this.progress();
-    this.copy();
+    // this.copy();
   },
 
   initLibraris: function () {
@@ -87,7 +87,7 @@ const landingFunctions = {
       var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
       if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
         // $(".info__block-item-text").css("opacity", "1");
-        $(".info__block-1 .info__block-item-text, .info__block-2 .info__block-item-text").spincrement({
+        $(".info__block-1 .info__block-item-text span, .info__block-2 .info__block-item-text span").spincrement({
           thousandSeparator: "",
           duration: 3000,
         });
