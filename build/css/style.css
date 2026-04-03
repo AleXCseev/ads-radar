@@ -2184,6 +2184,7 @@ body:has(.features__section) {
   .info__content .features__title {
     max-width: 65vw;
     font-size: 8.5vw;
+    margin-bottom: 4vw;
   }
   .info__text-mobile {
     font-weight: 400;
@@ -2191,7 +2192,7 @@ body:has(.features__section) {
     line-height: 1;
     text-align: center;
     color: #dfdede;
-    margin-bottom: 7vw;
+    margin-bottom: 5vw;
     display: block;
   }
   .info__block {
