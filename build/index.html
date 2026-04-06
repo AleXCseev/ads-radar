@@ -78,7 +78,7 @@
         <p class="radar__text-small">One strong signal can pay for your subscription in a day</p>
 
         <div class="radar__btn-wrapper">
-          <a href="#" class="radar__btn">
+          <button type="button" data-modal="open" class="radar__btn">
             <div>
               <span>Get Early Access</span>
               <svg width="19" height="15" viewBox="0 0 19 15" fill="" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +88,7 @@
                 />
               </svg>
             </div>
-          </a>
+          </button>
           <div class="radar__info-wrapper">
             <p class="radar__info">for the first 100 users</p>
             <div class="radar__price">
@@ -129,6 +129,27 @@
   </div>
 </section>
 </div>
+    <div class="overlay" id="modal">
+  <div class="modal__wrapper">
+    <div class="modal">
+      <button type="button" id="modal-close" class="modal__close">
+        <img src="img/close.png" alt="" />
+      </button>
+      <h2 class="modal__title">Early access is opening soon</h2>
+      <p class="modal__text">
+        We`re finalizing access for the 100 users. <br />
+        Payments open shortly
+      </p>
+      <a href="#" class="radar__btn">
+        <div>
+          <span>Got It</span>
+        </div>
+      </a>
+      <p class="modal__info">No spam. No charge yet</p>
+    </div>
+  </div>
+</div>
+
     <script src="libs/jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>

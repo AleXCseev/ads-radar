@@ -4,6 +4,7 @@ const landingFunctions = {
     this.menu();
     this.spincrement();
     this.progress();
+    this.modal();
     // this.copy();
   },
 
@@ -117,6 +118,30 @@ const landingFunctions = {
 
     $(window).on("resize", function () {
       moveElement();
+    });
+  },
+
+  modal: function () {
+    $("[data-modal='open']").click(function () {
+      $("#modal").fadeIn(300);
+      $("body").css("overflow", "hidden");
+      $("#modal").find(".modal__wrapper").addClass("active");
+    });
+
+    function close() {
+      $("#modal").fadeOut(300);
+      $("body").css("overflow", "auto");
+      $("#modal").find(".modal__wrapper").removeClass("active");
+    }
+
+    $("#modal").click(function (e) {
+      var target = e.target;
+      if (target.classList.contains("modal__close")) {
+        close();
+      }
+      if ($(target).closest(".modal").length === 0) {
+        close();
+      }
     });
   },
 };
