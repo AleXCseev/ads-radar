@@ -62,10 +62,18 @@
 
 .radar__text-small {
   font-weight: 400;
-  font-size: 19px;
+  font-size: 18px;
   text-align: center;
   color: var(--color-text-alt);
   margin-bottom: 30px;
+}
+
+.radar__text-supersmall {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: var(--color-text-alt);
+  margin: 10px 0;
 }
 
 .radar__btn-wrapper {
@@ -367,7 +375,7 @@
     font-size: 24px;
   }
   .radar__text-small {
-    font-size: 18px;
+    font-size: 16px;
   }
   .radar__item-title {
     font-size: 28px;
